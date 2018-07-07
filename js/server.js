@@ -10,16 +10,16 @@ var PORT = process.env.PORT || 3000
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
  
-// Routes
+// Routes to Front-end
 app.get('/', function (req, res) {
   res.send('Hello World')
 })
 
-app.get('/tables.html', function (req, res) {
+app.get('/tables', function (req, res) {
   res.send('Hello World')
 })
 
-app.get('/reserve.html', function (req, res) {
+app.get('/reserve', function (req, res) {
   res.send('Hello World')
 })
  

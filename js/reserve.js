@@ -1,7 +1,7 @@
 var waitList = [];
 
-// Create New Characters - takes in JSON input
-app.post("/api/characters", function(req, res) {
+// Create New Reservation - takes in JSON input
+app.post("/api/reserve", function(req, res) {
     var newcharacter = req.body;
   
     console.log(newcharacter);
