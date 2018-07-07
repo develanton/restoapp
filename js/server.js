@@ -27,7 +27,7 @@ app.get("/reserve", function(req, res) {
   res.sendFile(path.join(__dirname, "reserve.html"));
 });
 
-// Displays all characters
+// Displays all reserve
 app.get("/api/apireserve.js", function(req, res) {
   return res.json(reserves);
 });
