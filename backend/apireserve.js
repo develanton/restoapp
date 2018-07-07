@@ -13,8 +13,10 @@ var reservations = [
 
 ];
 
-  module.exports = function(apps){
-   apps.get("/api/reserve", function(req, res) {
-    return res.json(reservations);
-  });
-}
+
+  module.exports = 
+  function myFunc(app){
+      app.get("/api/reserve", function(req, res) {
+       return res.json(reservations);
+     });
+   }
