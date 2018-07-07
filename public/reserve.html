@@ -21,7 +21,7 @@
 			<br>
 
 			<div class="text-center">
-				<a href="/tables"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
+				<a href="/tables.html"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
 				<a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
 			</div>
 		</div>
@@ -57,7 +57,7 @@
 								<input type="text" class="form-control" id="reserve_uniqueID">
 							</div>
 
-							<button type="submit" class="btn btn-primary submit">Submit</button>
+							<button type="submit" class="btn btn-primary submit" id="new-reservation">Submit</button>
 						</form>
 
 					</div>
@@ -74,7 +74,28 @@
 	    </footer>
 
 	</div>
+	
+<script type="text/javascript">
 
+$("#new-reservation").on("click", function(event) {
+	event.preventDefault();
+
+var reservations = 
+    {
+        name: $("#reserve_name").val().trim(),
+        phone_number: $("#reserve_phone").val().trim(),
+        email: $("#reserve_email").val().trim(),
+        unique_id: $("#reserve_uniqueID").val().trim()
+    };
+
+    $.post("../public/tables.html", reservations)
+    .then(function(data){
+        console.log(data);
+        alert("Adding reservation....");
+    });
+});
+
+</script>
 </body>
 </html>
 
