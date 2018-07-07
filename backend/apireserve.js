@@ -1,7 +1,5 @@
 
 
-
-
 var reservations = [
 
     {
@@ -14,8 +12,7 @@ var reservations = [
 ];
 
 
-  module.exports = 
-  function myFunc(app){
+  module.exports = function(app){
       app.get("/api/reserve", function(req, res) {
        return res.json(reservations);
      });
