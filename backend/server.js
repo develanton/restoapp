@@ -38,9 +38,20 @@ app.post("/api/apireserve.js", function(req, res) {
 
   console.log(newReserv);
 
-  waitList.push(newReserv);
+  reservations.push(newReserv);
 
   res.json(newReserv);
+});
+
+// Create waiting list - takes in JSON input
+app.post("/api/apiwaiting.js", function(req, res) {
+  var newWaiter = req.body;
+
+  console.log(newWaiter);
+
+  waitList.push(newWaiter);
+
+  res.json(newWaiter);
 });
 
  
