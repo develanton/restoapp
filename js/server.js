@@ -11,17 +11,27 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
  
 // Routes to Front-end
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
 
-app.get('/tables', function (req, res) {
-  res.send('Hello World')
-})
+app.get("/", function(req, res) {
+  // res.send("Welcome to the Star Wars Page!")
+  res.sendFile(path.join(__dirname, "index.html"));
+});
 
-app.get('/reserve', function (req, res) {
-  res.send('Hello World')
-})
+app.get("/tables", function(req, res) {
+  // res.send("Welcome to the Star Wars Page!")
+  res.sendFile(path.join(__dirname, "tables.html"));
+});
+
+app.get("/reserve", function(req, res) {
+  // res.send("Welcome to the Star Wars Page!")
+  res.sendFile(path.join(__dirname, "reserve.html"));
+});
+
+// Displays all characters
+app.get("/api/apireserve.js", function(req, res) {
+  return res.json(reserves);
+});
+
  
 // Listner 
 app.listen(PORT, function() {
