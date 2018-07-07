@@ -14,6 +14,14 @@ app.use(bodyParser.json());
 app.get('/', function (req, res) {
   res.send('Hello World')
 })
+
+app.get('/tables.html', function (req, res) {
+  res.send('Hello World')
+})
+
+app.get('/reserve.html', function (req, res) {
+  res.send('Hello World')
+})
  
 // Listner 
 app.listen(PORT, function() {
