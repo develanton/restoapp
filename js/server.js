@@ -27,9 +27,20 @@ app.get("/reserve", function(req, res) {
   res.sendFile(path.join(__dirname, "reserve.html"));
 });
 
-// Displays all characters
+// Displays all reservations
 app.get("/api/apireserve.js", function(req, res) {
   return res.json(reserves);
+});
+
+// Create New Reservation - takes in JSON input
+app.post("/api/apireserve.js", function(req, res) {
+  var newReserv = req.body;
+
+  console.log(newReserv);
+
+  waitList.push(newReserv);
+
+  res.json(newReserv);
 });
 
  
