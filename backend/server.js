@@ -2,6 +2,7 @@
 var express = require('express');
 var bodyParser = require("body-parser");
 var path = require("path");
+require("apiserve.js")(apps);
 
 var app = express();
 var PORT = process.env.PORT || 3000
@@ -28,12 +29,11 @@ app.get("/reserve", function(req, res) {
 });
 
 // Displays all reservations
-app.get("/api/apireserve.js", function(req, res) {
-  return res.json(reserves);
-});
+
 
 // Create New Reservation - takes in JSON input
-app.post("/api/apireserve.js", function(req, res) {
+apps.post("apireserve.js", function(req, res) {
+ 
   var newReserv = req.body;
 
   console.log(newReserv);
@@ -44,7 +44,7 @@ app.post("/api/apireserve.js", function(req, res) {
 });
 
 // Create waiting list - takes in JSON input
-app.post("/api/apiwaiting.js", function(req, res) {
+app.post("apiwaiting.js", function(req, res) {
   var newWaiter = req.body;
 
   console.log(newWaiter);
