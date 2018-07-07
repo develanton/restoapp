@@ -11,15 +11,39 @@
 
 </head>
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <div class="container">
+
+        <div class="jumbotron">
+          <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> Hot Restaurant</h1>
+          <hr>
+          <h2 class="text-center"> Book your seat before they all are gone!</h2>
+          <br>
+    
+          <div class="text-center">
+            <a href="/tables"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> Make Reservation</button></a>
+            <a href="/reserve"><button type="button" class="btn btn-lg btn-gray"><span class="glyphicon glyphicon-credit-card"></span> Home</button></a>
+          </div>
+    
+        </div>
+    
+        <footer class="footer">
+          <div class="container">
+              <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
+          </div>
+        </footer>
+    
       </div>
 
-      
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          Featured
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
 
 
     
